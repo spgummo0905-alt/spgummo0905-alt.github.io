@@ -379,3 +379,29 @@ th { font-family: var(--mono); font-size: 10.5px; color: var(--faint); font-weig
 .c-avatar { background: radial-gradient(circle at 50% 35%, #fff 0%, #efe9dd 70%); }
 .c-avatar img { object-position: 50% 30%; transform: scale(1.02) translateY(4%); }
 .c-avatar:has(img) span { display: none; }
+
+/* ---- free-form profile figure (pops out of the card) ---- */
+.c-avatar { display: none; }
+.c-figure { position: absolute; right: 3%; bottom: 0; height: 122%; width: auto; pointer-events: none; user-select: none;
+  transform: translateZ(38px); backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  filter: drop-shadow(0 18px 22px rgba(0,0,0,.28)); border-bottom-right-radius: 18px; }
+.face.front .c-name, .face.front .c-line, .face.front .c-id { max-width: 54%; }
+.face.front .c-name { margin-top: auto; }
+.face.front .c-line { margin: 8px 0 10px; }
+.c-id { margin: 0 0 12px; display: grid; grid-template-columns: auto 1fr; gap: 0 10px; font-family: var(--mono); font-size: 10.5px; }
+.c-id dt { color: #a29d92; letter-spacing: .1em; }
+.c-id dd { margin: 0; color: #16161a; }
+.face.front .c-bot { max-width: 100%; }
+.face.front .c-chip { position: relative; z-index: 3; }
+.card-wrap { padding-top: 70px; }
+@media (max-width: 900px) { .card-wrap { padding-top: 64px; } .c-figure { height: 116%; } }
+.face.front .c-role { display: none; }
+.face.front .c-chip { margin-left: 10px; }
+.face.front .c-bot { justify-content: flex-start; }
+@media (max-width: 560px) {
+  .c-figure { height: 108%; right: 1%; }
+  .face.front .c-name, .face.front .c-line, .face.front .c-id { max-width: 50%; }
+  .face.front .c-line { font-size: 11.5px; }
+  .face.front .c-bot span:first-child { display: none; }
+  .face.front .c-chip { margin-left: 0; }
+}
