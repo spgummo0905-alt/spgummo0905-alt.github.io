@@ -3,83 +3,142 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>박검모 · 서비스 기획</title>
-<meta name="description" content="커머스 PM 5년, 바이오메디컬 AI 과정. 데이터로 흐름이 끊기는 지점을 찾아 서비스로 잇는 기획자 박검모의 작업 기록.">
-<meta property="og:title" content="박검모 · 서비스 기획">
+<title>박검모 — Service Planner</title>
+<meta name="description" content="커머스 PM 5년, 바이오메디컬 AI 과정. 데이터로 흐름이 끊기는 지점을 찾아 서비스로 잇는 기획자 박검모.">
+<meta name="theme-color" content="#0e0e0d">
+<meta property="og:title" content="박검모 — Service Planner">
 <meta property="og:description" content="흐름이 끊기는 지점을 찾아 서비스로 잇습니다.">
-<meta property="og:image" content="assets/empatho/demo-preview.gif">
+<meta property="og:image" content="https://spgummo0905-alt.github.io/assets/empatho/06_surgery-compare.jpg">
 <link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230e0e0d'/><circle cx='22' cy='10' r='4' fill='%23ff5c7a'/></svg>">
 </head>
 <body>
-<nav class="top"><div class="wrap">
-  <a class="brand" href="./">박검모</a>
-  <ul><li><a href="#work">작업</a></li><li><a href="#career">경력</a></li><li><a href="#contact">연락</a></li></ul>
-</div></nav>
+<div class="spot"></div>
 
-<main class="wrap">
-  <div class="hero">
-    <p class="eyebrow">SERVICE PLANNER · PM</p>
-    <h1>숫자를 읽던 마케터에서,<br>흐름을 설계하는 기획자로</h1>
-    <p class="lead">커머스 현장에서 5년 동안 열지도와 클릭 데이터로 화면을 고쳐 왔습니다. 그 숫자가 왜 움직였는지 더 정확히 답하고 싶어 6개월간 바이오메디컬 AI 과정에서 모델링부터 서비스 구현까지 직접 해 봤습니다. 지금은 두 경험을 합쳐, <b>사용자의 흐름이 끊기는 지점을 찾아 서비스로 잇는 일</b>을 하려고 합니다.</p>
-    <div class="links">
-      <a class="chip" href="https://github.com/spgummo0905-alt">GitHub</a>
-      <a class="chip" href="mailto:spgummo0905@gmail.com">spgummo0905@gmail.com</a>
+<header class="nav">
+  <a class="logo" href="#top">GUMMO<i></i><small>Service · Planner</small></a>
+  <ul>
+    <li><a href="#work"><span>01</span>work</a></li>
+    <li><a href="#decisions"><span>02</span>decisions</a></li>
+    <li><a href="#career"><span>03</span>career</a></li>
+    <li><a href="#contact"><span>04</span>contact</a></li>
+  </ul>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="kicker">박검모 · <b>open to work</b> · Daejeon / Remote</div>
+    <h1>Service<br>planner<em>.</em></h1>
+    <p class="tag">흐름이 끊기는 지점을 찾아, 서비스로 잇습니다.</p>
+    <div class="rule"></div>
+    <p class="lede">커머스 현장에서 5년 동안 <b>클릭과 테스트로 화면을 고쳤고</b>, 그 숫자가 왜 움직이는지 답하려고 6개월간 <b>의료 AI 서비스를 직접 기획하고 만들었습니다.</b></p>
+    <div class="stack">Commerce PM 5y · Bio-medical AI · React · Django · Go · ML</div>
+    <div class="cta">
+      <a class="btn primary" href="#work">Selected work →</a>
+      <a class="btn" href="#decisions">Decision log</a>
+      <a class="btn" href="https://github.com/spgummo0905-alt">GitHub ↗</a>
     </div>
+
+    <div class="chips" aria-hidden="true">
+      <span class="chip ok" style="top:22%;right:10%;animation-delay:-1s">판단 보류 · abstain</span>
+      <span class="chip warn box" style="top:33%;right:24%;animation-delay:-4s">409 DUPLICATE_RESERVATION</span>
+      <span class="chip" style="top:45%;right:7%;animation-delay:-2s">mask mismatch 5.8% → fixed</span>
+      <span class="chip ok box" style="top:57%;right:20%;animation-delay:-6s">BI-RADS 0 → 추가 촬영</span>
+      <span class="chip" style="top:68%;right:9%;animation-delay:-3s">A/B/C 소재 → winner</span>
+      <span class="chip warn" style="top:78%;right:27%;animation-delay:-5s">decisions logged · 27</span>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="block rv">
+      <div class="label"><div class="no">00 / ABOUT</div><h2>일하는 방식</h2><p>세 가지를 지키려고 합니다.</p></div>
+      <div class="principles">
+        <div><span class="n">01</span><h3>문제부터 다시 정의</h3><p>"모델이 더 정확하면 된다"보다 "어디서 흐름이 끊기나"를 먼저 봅니다.</p></div>
+        <div><span class="n">02</span><h3>결정은 기록으로</h3><p>무엇을 했는지만큼, 이번에 무엇을 하지 않기로 했는지를 적습니다.</p></div>
+        <div><span class="n">03</span><h3>한계는 먼저</h3><p>숨기면 나중에 치명적이고, 먼저 밝히면 신뢰가 됩니다.</p></div>
+      </div>
+    </section>
+
+    <section class="block" id="work">
+      <div class="label rv"><div class="no">01 / WORK</div><h2>Selected<br>work</h2><p>문제 → 선택지 → 결정 → 결과로 정리한 케이스 스터디</p></div>
+      <div class="work">
+        <a class="case rv" href="cases/empatho.html">
+          <div>
+            <div class="meta"><span class="k">MEDICAL AI</span><span>2026.08–09</span><span>TEAM 5</span></div>
+            <h3>확신이 없으면 멈추는<br>유방암 검진 CDSS, EMPATHO</h3>
+            <p>다섯 개 과로 끊긴 검진 흐름을 병변 하나로 잇고, AI가 애매할 땐 판정을 보류하도록 설계했습니다. 팀 합의를 결정 27건으로 정리하고 화면·서버 구현에 참여했습니다.</p>
+            <div class="tags"><span>결정 기록</span><span>권한 설계</span><span>React</span><span>Go</span></div>
+            <span class="go">Read case →</span>
+          </div>
+          <div class="thumb"><img src="assets/empatho/06_surgery-compare.jpg" alt="EMPATHO 유방외과 불일치 처분 화면"></div>
+        </a>
+        <a class="case rv" href="cases/tili.html">
+          <div>
+            <div class="meta"><span class="k">RELIABILITY</span><span>2026.08</span><span>TEAM 5</span></div>
+            <h3>판독문과 수치가<br>서로 다른 그림을 보고 있었다</h3>
+            <p>AI 소견문과 수치가 다른 마스크를 보던 불일치를 찾아, 값을 맞추는 대신 계산 경로 자체를 하나로 합쳤습니다.</p>
+            <div class="tags"><span>신뢰성</span><span>원인 추적</span><span>MedGemma</span></div>
+            <span class="go">Read case →</span>
+          </div>
+          <div class="thumb num"><b>5.8%</b><span>mask mismatch found</span></div>
+        </a>
+        <a class="case rv" href="cases/chefechan.html">
+          <div>
+            <div class="meta"><span class="k">COMMERCE</span><span>2024.02–2026.03</span><span>자사몰 PM</span></div>
+            <h3>클릭이 정한 메인 화면,<br>고객 단계별 이벤트</h3>
+            <p>열지도·구좌별 클릭·A/B 테스트로 메인 배치와 광고 소재를 고치고, 신규 → 구매 → 재참여 → 휴면 복귀 단계마다 다른 이벤트를 설계했습니다.</p>
+            <div class="tags"><span>데이터 기반 UX</span><span>A/B 테스트</span><span>CRM</span></div>
+            <span class="go">Read case →</span>
+          </div>
+          <div class="thumb num g"><b>+53만</b><span>members during tenure</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="block" id="decisions">
+      <div class="label rv"><div class="no">02 / DECISIONS</div><h2>Decision<br>log</h2><p>프로젝트에서 내린 결정만 따로 모았습니다.</p></div>
+      <ol class="log rv">
+        <li><a href="cases/empatho.html#d1"><span class="i">01</span><div><h4>검체 연결 권한의 빈틈을 찾다</h4><p>합의된 권한대로면 영상유도 조직검사의 병리 접수가 멈춘다.</p><div class="t">#권한설계 #흐름 · EMPATHO</div></div><span class="d">2026.08 ↗</span></a></li>
+        <li><a href="cases/empatho.html#d2"><span class="i">02</span><div><h4>"이번에 결정하지 않는 것"을 먼저 적다</h4><p>나중에 되살릴 수 없는 것만 남기고 나머지는 미뤘다.</p><div class="t">#스코프 #MVP · EMPATHO</div></div><span class="d">2026.08 ↗</span></a></li>
+        <li><a href="cases/empatho.html#d3"><span class="i">03</span><div><h4>BI-RADS 0을 "의심"으로 뭉개지 않다</h4><p>"다시 찍자"와 "의심스럽다"를 다른 칸에 담았다.</p><div class="t">#도메인 #데이터 · EMPATHO</div></div><span class="d">2026.08 ↗</span></a></li>
+        <li><a href="cases/tili.html#d1"><span class="i">04</span><div><h4>값을 맞추지 않고, 경로를 하나로</h4><p>보정은 다음에 또 어긋난다. 계산이 갈라지는 구조를 없앴다.</p><div class="t">#신뢰성 #원인추적 · TILI</div></div><span class="d">2026.08 ↗</span></a></li>
+        <li><a href="cases/tili.html#s3"><span class="i">05</span><div><h4>조용히 틀리느니, 시끄럽게 실패한다</h4><p>그럴듯한 오답이 명확한 실패보다 위험하다.</p><div class="t">#원칙 #의료데이터 · TILI</div></div><span class="d">2026.08 ↗</span></a></li>
+        <li><a href="cases/chefechan.html#d1"><span class="i">06</span><div><h4>메인 배치는 클릭이 정한다</h4><p>"밀고 싶은 상품" 대신 구좌별 성과로 자리를 정했다.</p><div class="t">#데이터기반UX · 셰프애찬</div></div><span class="d">2024– ↗</span></a></li>
+        <li><a href="cases/chefechan.html#d2"><span class="i">07</span><div><h4>광고 소재는 고객이 고른다</h4><p>A/B/C 버전을 동시에 돌리고, 선택받은 것만 남겼다.</p><div class="t">#AB테스트 · 셰프애찬</div></div><span class="d">2024– ↗</span></a></li>
+        <li><a href="cases/chefechan.html#s2"><span class="i">08</span><div><h4>고객 단계마다, 다른 이벤트를</h4><p>검증 → 전환 → 재참여 → 휴면 복귀로 나눠 설계했다.</p><div class="t">#CRM #리텐션 · 셰프애찬</div></div><span class="d">2025 ↗</span></a></li>
+      </ol>
+    </section>
+
+    <section class="block" id="career">
+      <div class="label rv"><div class="no">03 / CAREER</div><h2>Career</h2><p>커머스 4년 11개월 + 의료 AI 6개월</p></div>
+      <ol class="career rv">
+        <li><span class="y">2026.04 — 10</span><div><h4>바이오메디컬 AI 과정 <small>미래융합교육원 × 건양대학교병원</small></h4><p>의료 데이터 전처리부터 ML/DL 모델링, CDSS 서비스 기획·구현·배포까지. 팀 프로젝트 6개.</p><div class="tags"><span>Python</span><span>SQL</span><span>PyTorch</span><span>Django</span><span>React</span><span>Go</span></div></div></li>
+        <li><span class="y">2024.02 — 2026.03</span><div><h4>㈜오웬푸드셰프애찬 <small>미래전략사업부 · 브랜드마케팅 / 자사몰 PM</small></h4><p>자사몰 메인 설계, 광고 소재 A/B 테스트, 단계별 이벤트, 임직원몰 0→1, 전 매체 퍼포먼스 마케팅과 KPI 수립.</p><div class="tags"><span>자사몰</span><span>A/B</span><span>CRM</span><span>Meta · Google · Naver · Kakao</span></div></div></li>
+        <li><span class="y">2023.08 — 2024.02</span><div><h4>브이유컴퍼니 <small>팀장</small></h4><p>크몽 서비스 4종을 직접 기획·운영해 3개 부문 1위까지.</p><div class="tags"><span>서비스 기획</span><span>플랫폼 운영</span></div></div></li>
+        <li><span class="y">2021.05 — 2023.08</span><div><h4>콜라보에어㈜ <small>선임연구원 · 팀장</small></h4><p>회사에 없던 농수산물 커머스를 0→1로 구축, 공공기관 용역 PM, 메타버스 디지털 운동회 기획.</p><div class="tags"><span>신사업 0→1</span><span>B2G</span><span>공간사업 PM</span></div></div></li>
+      </ol>
+    </section>
+
+    <section class="block contact" id="contact">
+      <div class="label rv"><div class="no">04 / CONTACT</div><h2>Contact</h2><p>서비스기획 · PM · 데이터 기반 기획</p></div>
+      <div class="rv">
+        <h3><a href="mailto:spgummo0905@gmail.com">spgummo0905<br>@gmail.com</a></h3>
+        <div class="cta"><a class="btn" href="https://github.com/spgummo0905-alt">GitHub ↗</a><a class="btn" href="https://github.com/spgummo0905-alt/empatho-showcase">EMPATHO repo ↗</a></div>
+      </div>
+    </section>
   </div>
-
-  <section>
-    <h2>일하는 방식</h2>
-    <div class="principles">
-      <div class="principle"><b>문제부터 다시 정의합니다</b><span class="muted">"모델이 더 정확하면 된다"보다 "어디서 흐름이 끊기나"를 먼저 봅니다.</span></div>
-      <div class="principle"><b>결정은 기록으로 남깁니다</b><span class="muted">무엇을 했는지만큼, 이번에 무엇을 하지 않기로 했는지를 적습니다.</span></div>
-      <div class="principle"><b>한계는 먼저 밝힙니다</b><span class="muted">숨기면 나중에 치명적이고, 먼저 밝히면 신뢰가 됩니다.</span></div>
-    </div>
-  </section>
-
-  <section id="work">
-    <h2>케이스 스터디</h2>
-    <div class="cards">
-      <a class="card" href="cases/empatho.html">
-        <span class="tag">의료 AI · 최종 프로젝트</span>
-        <h3>EMPATHO — 확신이 없으면 멈추는 유방암 검진 CDSS</h3>
-        <p>다섯 개 과로 끊긴 검진 흐름을 병변 하나로 잇고, AI가 애매할 땐 판정을 보류하게 설계했습니다. 팀 합의를 결정 27건으로 정리하고, 화면과 서버 구현에 참여했습니다.</p>
-        <p class="meta">2026.08 – 09 · 5인 팀 · 기획 문서 · React · Go · nginx</p>
-      </a>
-      <a class="card" href="cases/tili.html">
-        <span class="tag">의료 AI · 신뢰성</span>
-        <h3>TILI — 판독문과 수치가 서로 다른 그림을 보고 있었다</h3>
-        <p>AI 소견문과 수치가 다른 마스크를 보던 5.8%의 불일치를 찾아, 값을 맞추는 대신 계산 경로 자체를 하나로 합쳤습니다.</p>
-        <p class="meta">2026.08 · 5인 팀 · 추론 워커 · MedGemma 연동</p>
-      </a>
-      <a class="card" href="cases/chefechan.html">
-        <span class="tag">커머스 · 자사몰 PM</span>
-        <h3>셰프애찬 자사몰 — 데이터로 메인 화면과 이벤트를 다시 짜다</h3>
-        <p>열지도·구좌별 클릭·A/B 테스트로 메인 배치와 광고 소재를 고치고, 고객 단계마다 다른 이벤트를 설계했습니다.</p>
-        <p class="meta">2024.02 – 2026.03 · 브랜드마케팅 · 자사몰 PM</p>
-      </a>
-    </div>
-  </section>
-
-  <section id="career">
-    <h2>경력과 학습</h2>
-    <ul class="timeline">
-      <li><span class="when">2026.04 – 2026.10</span><span class="what"><b>바이오메디컬 AI 과정</b><span>미래융합교육원 × 건양대학교병원 · Python, SQL, ML/DL, 의료데이터, CDSS 구현·배포</span></span></li>
-      <li><span class="when">2024.02 – 2026.03</span><span class="what"><b>㈜오웬푸드셰프애찬 · 미래전략사업부</b><span>브랜드마케팅 · 자사몰 PM · 퍼포먼스 마케팅 · KPI 수립</span></span></li>
-      <li><span class="when">2023.08 – 2024.02</span><span class="what"><b>브이유컴퍼니 · 팀장</b><span>마케팅 · 크몽 서비스 4종 기획·운영</span></span></li>
-      <li><span class="when">2021.05 – 2023.08</span><span class="what"><b>콜라보에어㈜ · 선임연구원 / 팀장</b><span>신사업 · 농수산물 커머스 0→1 · 공공기관 용역 PM · 메타버스 디지털 운동회 기획</span></span></li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>연락</h2>
-    <p>서비스기획 · PM · 데이터 기반 기획 포지션에 관심이 있습니다. 편하게 연락 주세요.</p>
-    <div class="links">
-      <a class="chip" href="mailto:spgummo0905@gmail.com">메일 보내기</a>
-      <a class="chip" href="https://github.com/spgummo0905-alt">GitHub</a>
-    </div>
-  </section>
 </main>
-<footer><div class="wrap">© 2026 박검모 · 이 사이트의 프로젝트 화면에 나오는 환자·의료진 정보는 모두 가상 데이터입니다.</div></footer>
+
+<footer><span>© 2026 GUMMO PARK</span><span>프로젝트 화면의 환자·의료진 정보는 모두 가상 데이터입니다</span></footer>
+
+<script>
+  const s = document.querySelector('.spot');
+  addEventListener('pointermove', e => { s.style.setProperty('--mx', e.clientX + 'px'); s.style.setProperty('--my', e.clientY + 'px'); });
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+  const links = [...document.querySelectorAll('.nav ul a')];
+  const so = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-45% 0px -50% 0px' });
+  ['work','decisions','career','contact'].forEach(id => so.observe(document.getElementById(id)));
+</script>
 </body>
 </html>
