@@ -822,3 +822,24 @@ a.w-vcard:hover .w-play { transform: translate(-50%,-50%) scale(1.08); }
 .c2-row b { font-size: clamp(18px, 4.05vw, 60px); } @media (max-width: 760px) { .c2-row b { font-size: clamp(18px, 5.2vw, 40px); } }
 .c2-row b { font-size: clamp(18px, 5vw, 72px); } @media (max-width: 760px) { .c2-row b { font-size: clamp(18px, 5.2vw, 40px); } }
 .c2-row b { font-size: clamp(18px, 4.9vw, 70px); }
+/* hero skills v19: tinted, bold, clickable */
+.can.can2 { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.can2 li { padding: 0; border: 0; background: none; box-shadow: none; border-radius: 0; }
+.can2 a { display: flex; align-items: center; gap: 12px; padding: 10px 18px 10px 10px; border-radius: 14px; background: color-mix(in srgb, var(--cc) 12%, #fff); border: 1.5px solid color-mix(in srgb, var(--cc) 45%, transparent); transition: transform .2s, background .2s, box-shadow .2s; }
+.can2 span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--cc); color: #fff; font-size: 12px; font-weight: 700; }
+.can2 b { font-size: 18px; font-weight: 800; letter-spacing: -.02em; color: color-mix(in srgb, var(--cc) 75%, #111); }
+.can2 a:hover { transform: translateY(-3px); background: var(--cc); box-shadow: 0 14px 24px -14px var(--cc); }
+.can2 a:hover b { color: #fff; } .can2 a:hover span { background: rgba(255,255,255,.25); }
+@media (max-width: 640px) { .can2 a { padding: 8px 14px 8px 8px; gap: 10px; } .can2 span { width: 28px; height: 28px; font-size: 11px; } .can2 b { font-size: 15px; } }
+.can.can2 { gap: 8px; flex-wrap: nowrap; }
+.can2 a { padding: 8px 14px 8px 8px; gap: 9px; border-radius: 12px; }
+.can2 span { width: 28px; height: 28px; border-radius: 8px; font-size: 11px; }
+.can2 b { font-size: 16px; white-space: nowrap; }
+@media (max-width: 1100px) { .can.can2 { flex-wrap: wrap; } }
+/* hero skills B2 */
+.skills { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 30px 0 0; padding: 16px 0; border-top: 2px solid var(--text); border-bottom: 1px solid var(--line-2); max-width: 640px; }
+.skills a { font-size: 22px; font-weight: 800; letter-spacing: -.035em; color: var(--text); transition: color .2s; white-space: nowrap; }
+.skills a:hover { color: var(--cc); }
+.skills sup { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--cc); margin-left: 3px; vertical-align: 12px; }
+.skills i { font-style: normal; color: var(--line-2); font-weight: 300; font-size: 22px; }
+@media (max-width: 640px) { .skills a, .skills i { font-size: 18px; } .skills { gap: 4px 10px; } }

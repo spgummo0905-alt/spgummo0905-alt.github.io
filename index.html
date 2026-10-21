@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="데이터로 판단하고 AI를 서비스에 적용하는 기획자 박검모의 포트폴리오">
 <meta name="twitter:image" content="https://spgummo0905-alt.github.io/assets/og.jpg?v=3">
 <link rel="canonical" href="https://spgummo0905-alt.github.io/">
-<link rel="stylesheet" href="assets/style.css?v=17">
+<link rel="stylesheet" href="assets/style.css?v=20">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23191917'/><circle cx='22' cy='10' r='4' fill='%2317805a'/></svg>">
 </head>
 <body class="calm">
@@ -41,12 +41,7 @@
       <div class="kicker">SERVICE PLANNER · PM · <b>open to work</b></div>
       <h1>데이터로 판단하고,<br><span class="hl">AI를 서비스에 적용하는</span><br>기획자 박검모입니다.</h1>
       <p class="lede">커머스에서 약 5년간 고객 행동 데이터를 바탕으로 화면과 마케팅을 개선했습니다. 이후 의료 AI 서비스를 기획·구현하며 모델의 결과를 실제 서비스 흐름에 연결하는 경험을 쌓았습니다.</p>
-      <ul class="can" aria-label="핵심 역량">
-        <li class="c-plan"><b>서비스 기획·PM</b></li>
-        <li class="c-data"><b>데이터 분석</b></li>
-        <li class="c-dev"><b>AI 서비스</b></li>
-        <li class="c-design"><b>화면·프로토타입</b></li>
-      </ul>
+      <nav class="skills" aria-label="핵심 역량"><a class="c-plan" href="#work" data-jump="plan">기획·PM<sup>7</sup></a><i>/</i><a class="c-mkt" href="#work" data-jump="mkt">마케팅<sup>5</sup></a><i>/</i><a class="c-design" href="#work" data-jump="design">화면·콘텐츠<sup>4</sup></a><i>/</i><a class="c-dev" href="#work" data-jump="dev">개발<sup>4</sup></a><i>/</i><a class="c-data" href="#work" data-jump="data">데이터·AI<sup>6</sup></a></nav>
       <div class="cta">
         <a class="btn primary" href="#story">커리어 흐름 보기 ↓</a>
         <a class="btn" href="#work">대표 작업</a>
@@ -315,6 +310,8 @@
   const vclose=()=>{vv.pause(); vm.hidden=true;};
   vm.addEventListener('click',e=>{ if(e.target===vm||e.target.classList.contains('vm-x')) vclose(); });
   addEventListener('keydown',e=>{ if(e.key==='Escape'&&!vm.hidden) vclose(); });
+
+  document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',e=>{ e.preventDefault(); setF(a.dataset.jump); document.querySelector('#work').scrollIntoView({behavior:'smooth'}); }));
 </script>
 </body>
 </html>
