@@ -4,21 +4,21 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="#faf8f4" name="theme-color"/>
-<title>TILI · 박검모</title>
-<meta content="병리 분석 결과를 의료진과 환자에게 전달하는 서비스에서, AI 판독문과 화면 수치가 다르게 계산되는 원인을 찾아 수정한 기록" name="description"/>
+<title>EMPATHO 병리 판독 · 박검모</title>
+<meta content="AI 판독문과 화면 수치가 다르게 계산되는 원인을 찾아 계산 경로를 통합한 기록입니다." name="description"/>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="박검모 · Service Planner">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:url" content="https://spgummo0905-alt.github.io/cases/tili.html">
-<meta property="og:title" content="TILI — AI 판독문과 화면 수치의 불일치 해결 · 박검모">
-<meta property="og:description" content="병리 분석 결과를 의료진과 환자에게 전달하는 서비스에서, AI 판독문과 화면 수치가 다르게 계산되는 원인을 찾아 수정한 기록">
+<meta property="og:title" content="EMPATHO 병리 판독 — 판독 결과 불일치 해결 · 박검모">
+<meta property="og:description" content="AI 판독문과 화면 수치가 다르게 계산되는 원인을 찾아 계산 경로를 통합한 기록입니다.">
 <meta property="og:image" content="https://spgummo0905-alt.github.io/assets/og.jpg?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="박검모 Service planner 포트폴리오 — 프로필 명함 이미지">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="TILI — AI 판독문과 화면 수치의 불일치 해결 · 박검모">
-<meta name="twitter:description" content="병리 분석 결과를 의료진과 환자에게 전달하는 서비스에서, AI 판독문과 화면 수치가 다르게 계산되는 원인을 찾아 수정한 기록">
+<meta name="twitter:title" content="EMPATHO 병리 판독 — 판독 결과 불일치 해결 · 박검모">
+<meta name="twitter:description" content="AI 판독문과 화면 수치가 다르게 계산되는 원인을 찾아 계산 경로를 통합한 기록입니다.">
 <meta name="twitter:image" content="https://spgummo0905-alt.github.io/assets/og.jpg?v=3">
 <link rel="canonical" href="https://spgummo0905-alt.github.io/cases/tili.html">
 <link href="../assets/style.css" rel="stylesheet"/>
@@ -37,9 +37,9 @@
 <div class="article"><aside class="toc"><a class="back" href="../#work">← 전체 작업</a><ol><li><a href="#s1">서비스 소개</a></li><li><a href="#s2">발견한 문제</a></li><li><a href="#s3">추가로 수정한 오류</a></li><li><a href="#s4">추론 환경 변경</a></li><li><a href="#s5">회고</a></li></ol></aside><article>
 
 <header>
-<p class="kicker">의료 AI · 신뢰성</p>
-<h1>TILI — AI 판독문과 화면 수치의 불일치 해결</h1>
-<p class="sub">병리 분석 결과를 의료진과 환자에게 전달하는 서비스에서, AI 판독문과 화면 수치가 다르게 계산되는 원인을 찾아 수정한 기록</p>
+<p class="kicker">의료 AI · EMPATHO</p>
+<h1>EMPATHO 병리 판독 — 판독 결과 불일치 해결</h1>
+<p class="sub">AI 판독문과 화면 수치가 다르게 계산되는 원인을 찾아 계산 경로를 통합한 기록입니다.</p>
 <div class="facts">
 <div class=""><b>기간</b>2026.08</div>
 <div class=""><b>팀</b>5인 (3조)</div>
@@ -48,15 +48,15 @@
 </div>
 </header>
 <h2 id="s1"><span class="no">01</span>서비스 소개</h2>
-<p>병리 조직 이미지를 AI가 분석해 면역세포 비율(sTIL)을 계산하고, 언어 모델인 MedGemma가 결과를 판독문 형태로 작성합니다. 의료진은 웹과 태블릿에서, 환자는 모바일에서 결과를 확인합니다. 검체와 환자가 바뀌는 사고를 막기 위해 QR로 본인을 확인합니다.</p>
+<p>병리 조직 이미지에서 면역세포 비율(sTIL)을 계산하고, 그 결과를 판독문과 의료진 화면에 제공하는 서비스입니다.</p>
 <h2 id="s2"><span class="no">02</span>발견한 문제</h2>
-<p>프론트엔드를 맡은 팀원이 화면 수치는 "종양 0%"인데 판독문에는 종양이 있는 것처럼 표시되는 사례를 공유했습니다.</p>
-<p>코드를 확인한 결과, 수치 계산과 판독문용 이미지 생성 과정이 서로 다른 마스크를 사용하고 있었습니다. 판독문에 사용된 이미지를 다시 측정하니 종양 영역이 <b>5.8%</b> 포함되어 있었습니다.</p>
+<p>화면에는 종양이 0%로 표시됐지만 판독문에는 종양이 있는 것처럼 작성된 사례가 있었습니다. 코드를 확인한 결과 두 결과가 서로 다른 마스크를 사용했고, 판독문용 이미지에는 종양 영역 <b>5.8%</b>가 포함돼 있었습니다.</p>
+
 <div class="decision rv" id="d1">
 <h3>해결: 마스크 생성 함수 통합</h3>
 <dl>
 <dt>선택지</dt><dd>① 두 결과가 다를 때 한쪽 값을 보정해 맞춘다  ② 계산이 나뉘는 구조 자체를 없앤다</dd>
-<dt>결정</dt><dd>②. 한쪽 결과값을 보정하는 방법도 있었지만, 다른 입력에서 같은 문제가 반복될 수 있었습니다. 두 결과가 <code>consensus_mask</code> 함수에서 생성한 동일한 마스크를 사용하도록 경로를 통합하고, 판독문 프롬프트에는 색상 범례를 추가해 AI가 참고하는 영역을 명시했습니다.</dd>
+<dt>결정</dt><dd>②. 한쪽 값을 보정하면 다른 입력에서 문제가 반복될 수 있다고 판단했습니다. 판독문과 화면 수치가 같은 <code>consensus_mask</code> 함수의 결과를 사용하도록 경로를 통합했습니다.</dd>
 <dt>결과</dt><dd>같은 문제가 다시 생기지 않도록 회귀 테스트 7개를 추가했습니다.</dd>
 </dl>
 </div>
@@ -71,7 +71,7 @@
 <h2 id="s4"><span class="no">04</span>추론 환경 변경</h2>
 <p>초기에는 클라우드 GPU를 사용했지만 비용과 콜드스타트(첫 요청이 느린 문제) 때문에 팀이 로컬 워크스테이션 추론 방식으로 전환했습니다. 워커가 서버에서 작업을 가져가도록 구성해 외부에서 워크스테이션에 직접 접속하지 않아도 되게 했습니다.</p>
 <h2 id="s5"><span class="no">05</span>회고</h2>
-<p>이 프로젝트에서는 새로운 기능을 만드는 것보다 이미 생성된 결과가 올바른지 검증하는 일을 주로 맡았습니다. 이후 데이터를 화면에 표시할 때는 계산에 사용된 코드와 입력이 무엇인지, 결과가 잘못됐을 때 시스템과 사용자가 이를 알아챌 수 있는지까지 확인해야 한다는 기준이 생겼습니다.</p>
+<p>AI 결과를 화면에 표시할 때는 모델 성능뿐 아니라 어떤 입력과 계산 경로가 사용됐는지, 오류를 사용자가 알아챌 수 있는지까지 확인해야 한다는 기준을 얻었습니다.</p>
 <a class="next" href="chefechan.html"><div><span>다음 프로젝트</span><b>셰프애찬 자사몰</b></div><span class="mono">→</span></a></article></div>
 <footer><span>© 2026 GUMMO PARK</span><span></span></footer>
 <script>
