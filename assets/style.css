@@ -768,3 +768,42 @@ footer { border-top: 0; }
 .nb-list li { box-shadow: 0 24px 50px -30px rgba(0,0,0,.8); }
 .nb-n { -webkit-text-stroke-color: var(--accent); }
 .next-band + .wrap .work2 { border-top: 0; }
+/* v13 */
+.chapter .result + .shots, .chapter .result + .shot { margin-top: 20px; }
+.c2-mail { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; padding: 30px 30px; border: 1px solid rgba(63,224,142,.45); border-radius: 20px; background: linear-gradient(135deg, rgba(0,178,92,.16), rgba(0,178,92,.04)); transition: transform .25s, border-color .25s, background .25s; }
+.c2-mail span { font-size: 11px; letter-spacing: .16em; color: #8fa89a; }
+.c2-mail b { font-size: clamp(22px, 2.6vw, 34px); font-weight: 800; letter-spacing: -.03em; color: #3fe08e; overflow-wrap: anywhere; }
+.c2-mail i { font-style: normal; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: #04120a; font-size: 22px; font-weight: 800; transition: transform .25s; }
+.c2-mail:hover { transform: translateY(-3px); border-color: #3fe08e; background: linear-gradient(135deg, rgba(0,178,92,.24), rgba(0,178,92,.06)); }
+.c2-mail:hover i { transform: translateX(4px); }
+@media (max-width: 640px) { .c2-mail { grid-template-columns: 1fr auto; padding: 22px; } .c2-mail span { grid-column: 1 / -1; } }
+.w-vcard .w-thumb { position: relative; }
+.w-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,.92); color: #0c1410; display: grid; place-items: center; font-size: 22px; padding-left: 4px; box-shadow: 0 10px 30px rgba(0,0,0,.35); transition: transform .25s; }
+a.w-vcard:hover .w-play { transform: translate(-50%,-50%) scale(1.08); }
+.vmodal { position: fixed; inset: 0; z-index: 100; background: rgba(6,10,8,.82); display: grid; place-items: center; padding: 20px; }
+.vmodal[hidden] { display: none; }
+.vm-box { position: relative; width: min(1100px, 100%); }
+.vm-box video { width: 100%; border-radius: 14px; background: #000; display: block; }
+.vm-x { position: absolute; right: -6px; top: -48px; width: 40px; height: 40px; border: 0; border-radius: 50%; background: #fff; font-size: 24px; cursor: pointer; }
+.c2-mail { grid-template-columns: 1fr auto; row-gap: 8px; }
+.c2-mail span { grid-column: 1 / -1; }
+.c2-mail b { font-size: clamp(20px, 2.3vw, 32px); white-space: nowrap; overflow-wrap: normal; }
+@media (max-width: 420px) { .c2-mail b { font-size: 18px; } }
+/* contact v14: big label, 2-line headline, huge white email row */
+.c2-in { grid-template-columns: 1fr; gap: 44px; align-items: start; }
+.c2-k { font-size: 16px; letter-spacing: .18em; color: #a8bcb0; gap: 12px; }
+.c2-k i { width: 10px; height: 10px; }
+.c2-head h2 { font-size: clamp(36px, 5vw, 72px); margin: 24px 0 20px; }
+.c2-row { display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 24px; padding: 34px 4px; border-top: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16); transition: padding .25s, background .25s; }
+.c2-row span { font-size: 13px; letter-spacing: .18em; color: #8fa89a; }
+.c2-row b { font-size: clamp(30px, 6.4vw, 92px); font-weight: 800; letter-spacing: -.045em; line-height: 1.05; color: #fff; white-space: nowrap; }
+.c2-row i { font-style: normal; font-size: clamp(28px, 3vw, 44px); color: #8fa89a; transition: transform .25s, color .25s; }
+.c2-row:hover { padding-left: 16px; background: rgba(255,255,255,.03); }
+.c2-row:hover b { color: #3fe08e; }
+.c2-row:hover i { color: #3fe08e; transform: translateX(6px); }
+@media (max-width: 760px) { .c2-row { grid-template-columns: 1fr auto; row-gap: 10px; padding: 24px 2px; } .c2-row span { grid-column: 1 / -1; } .c2-row b { font-size: clamp(22px, 7.4vw, 40px); } }
+.c2-in > * { min-width: 0; }
+.c2-row { grid-template-columns: 1fr auto; row-gap: 14px; }
+.c2-row span { grid-column: 1 / -1; }
+.c2-row b { font-size: clamp(24px, 6.2vw, 84px); }
+@media (max-width: 760px) { .c2-row b { font-size: clamp(20px, 6.6vw, 40px); } }
