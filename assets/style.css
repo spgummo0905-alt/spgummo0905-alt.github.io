@@ -664,3 +664,12 @@ a.w-card:hover { border-color: var(--line-2); box-shadow: 0 20px 40px -24px rgba
 .can b { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: -.02em; }
 @media (max-width: 640px) { .can li { padding: 9px 16px; } .can b { font-size: 16px; } }
 .can { display: flex; flex-wrap: wrap; }
+/* NEXT v9: keyword, proof badge, aligned links */
+.next-band::after { -webkit-text-stroke-color: rgba(255,255,255,.2); }
+.nb-top { display: flex; align-items: flex-end; gap: 12px; margin-bottom: 18px; }
+.nb-top .nb-n { margin-bottom: 0; }
+.nb-key { font-size: 12px; font-weight: 700; letter-spacing: .14em; color: #fff; background: #04120a; border-radius: 6px; padding: 4px 9px; margin-bottom: 6px; }
+.nb-list p { margin: 8px 0 14px; font-size: 14px; }
+.nb-proof { display: block; font-style: normal; font-size: 14px; font-weight: 800; color: var(--accent-ink); background: rgba(0,178,92,.1); border-radius: 10px; padding: 9px 12px; margin-bottom: 16px; letter-spacing: -.01em; }
+.nb-links { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.nb-list .nb-links a { margin: 0; padding: 0; border: 0; font-size: 13px; }
