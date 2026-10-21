@@ -658,3 +658,9 @@ a.w-card:hover { border-color: var(--line-2); box-shadow: 0 20px 40px -24px rgba
 @media (max-width: 980px) { .w-feat .w-thumb { width: 50%; } }
 @media (max-width: 640px) { .w-feat .w-thumb { width: 100%; aspect-ratio: 16/10; } }
 .log li a { border-color: var(--line); }
+/* hero tiles v9: solid brand green */
+.can { gap: 10px; margin-top: 30px; }
+.can li { background: var(--accent); border: 0; border-radius: 999px; padding: 11px 22px; box-shadow: 0 8px 18px -10px rgba(0,120,60,.55); }
+.can b { font-size: 18px; font-weight: 700; color: #fff; letter-spacing: -.02em; }
+@media (max-width: 640px) { .can li { padding: 9px 16px; } .can b { font-size: 16px; } }
+.can { display: flex; flex-wrap: wrap; }
