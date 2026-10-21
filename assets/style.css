@@ -738,3 +738,23 @@ a.w-card:hover { border-color: var(--line-2); box-shadow: 0 20px 40px -24px rgba
 .w-board .wb-col { cursor: default; }
 details.more-dec { margin: 18px 0; border: 1px solid var(--line); border-radius: 12px; background: var(--bg-2); padding: 4px 18px; }
 details.more-dec summary { cursor: pointer; padding: 12px 0; font-weight: 700; color: var(--accent-ink); }
+/* contact v12: refined dark */
+.contact2 { position: relative; z-index: 2; background: #0c1410; color: #eef3ef; overflow: hidden; }
+.contact2::before { content: ""; position: absolute; width: 760px; height: 760px; right: -220px; top: -300px; border-radius: 50%; background: radial-gradient(circle, rgba(0,178,92,.28), transparent 62%); pointer-events: none; }
+.c2-in { position: relative; max-width: 1280px; margin: 0 auto; padding: 120px clamp(16px, 6vw, 88px) 110px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
+.c2-k { display: flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: .14em; color: #8fa89a; }
+.c2-k i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(0,178,92,.18); }
+.c2-head h2 { margin: 22px 0 22px; font-size: clamp(38px, 4.8vw, 64px); line-height: 1.12; letter-spacing: -.05em; font-weight: 800; color: #fff; }
+.c2-head h2 em { font-style: normal; color: #3fe08e; }
+.c2-head p { margin: 0; font-size: 15.5px; line-height: 1.8; color: #a8bcb0; }
+.c2-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(255,255,255,.14); }
+.c2-list li { border-bottom: 1px solid rgba(255,255,255,.14); }
+.c2-list a { display: grid; grid-template-columns: 110px 1fr auto; align-items: center; gap: 16px; padding: 22px 4px; transition: padding .25s, background .25s; }
+.c2-list span { font-size: 11px; letter-spacing: .14em; color: #7f978a; }
+.c2-list b { font-size: clamp(17px, 1.7vw, 22px); font-weight: 700; letter-spacing: -.02em; color: #fff; overflow-wrap: anywhere; }
+.c2-list i { font-style: normal; font-size: 20px; color: #7f978a; transition: transform .25s, color .25s; }
+.c2-list a:hover { padding-left: 14px; background: rgba(255,255,255,.03); }
+.c2-list a:hover i { color: #3fe08e; transform: translateX(4px); }
+.c2-list li:first-child b { color: #3fe08e; }
+@media (max-width: 900px) { .c2-in { grid-template-columns: 1fr; padding-top: 80px; padding-bottom: 72px; gap: 40px; } .c2-list a { grid-template-columns: 1fr auto; } .c2-list span { grid-column: 1 / -1; } }
+footer { border-top: 0; }
