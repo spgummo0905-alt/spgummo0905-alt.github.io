@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://spgummo0905-alt.github.io/assets/og.jpg?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="박검모 — Service planner. 흐름이 끊기는 지점을 찾아, 서비스로 잇습니다.">
+<meta property="og:image:alt" content="박검모 Service planner 포트폴리오 — 프로필 명함 이미지">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="대전 아파트 지수 · 박검모">
 <meta name="twitter:description" content="국토부 실거래가·카카오 로컬·통계청 물가지수로 대전·세종 아파트를 실거래가·입지·실질수익률로 비교하는 서비스를 혼자 기획·개발한 기록">
@@ -34,26 +34,26 @@
 </ul>
 </header>
 
-<div class="article"><aside class="toc"><a class="back" href="../#work">← ALL WORK</a><ol><li><a href="#s1">왜 만들었나</a></li><li><a href="#s2">데이터 흐름</a></li><li><a href="#s3">지표 설계 — 숫자를 믿게 만드는 규칙</a></li><li><a href="#s4">화면 — 사는 사람의 질문별로</a></li><li><a href="#s5">알리기 — 공유되고 검색되게</a></li><li><a href="#s6">다음 할 일과 돌아보며</a></li></ol></aside><article>
+<div class="article"><aside class="toc"><a class="back" href="../#work">← ALL WORK</a><ol><li><a href="#s1">만든 이유</a></li><li><a href="#s2">데이터 수집과 갱신</a></li><li><a href="#s3">지표 설계 기준</a></li><li><a href="#s4">화면 — 구매자의 질문별 구성</a></li><li><a href="#s5">공유와 검색 노출</a></li><li><a href="#s6">다음 할 일과 돌아보며</a></li></ol></aside><article>
 <header>
 <p class="kicker">데이터 · 개인 프로젝트</p>
-<h1>대전 아파트 지수 — 수도권의 임장 사이트를, 대전 공공데이터로</h1>
-<p class="sub">대전·세종 아파트를 실거래가 · 입지 · 실질수익률로 비교하는 서비스를 기획부터 데이터 수집, 배포, 매일 자동 갱신까지 혼자 만든 기록</p>
+<h1>대전 아파트 지수 — 공공데이터로 만든 대전·세종 아파트 비교 서비스</h1>
+<p class="sub">대전·세종 아파트를 실거래가 · 입지 · 실질수익률로 비교하는 서비스를 기획, 데이터 수집, 배포, 매일 자동 갱신까지 혼자 만든 개인 프로젝트</p>
 <div class="facts"><div><b>기간</b>2026.10</div><div><b>형태</b>개인 프로젝트</div><div><b>내 역할</b>기획 · 데이터 · 개발 (1인)</div><div><b>스택</b>Python · pandas · Jinja2 · GitHub Actions</div></div>
 </header>
-<h2 id="s1"><span class="no">01</span>왜 만들었나</h2>
-<p>수도권에는 아파트를 숫자로 비교해 주는 온라인 임장 서비스가 많지만, 대전에서 같은 질문을 하면 볼 곳이 마땅치 않았습니다. 그래서 같은 발상을 <b>대전에 맞춰, 공공데이터만으로 처음부터</b> 만들었습니다. 지금은 세종까지 넓혔습니다.</p><figure class="rv"><img src="../assets/work/apt-home.webp" alt="홈 — 단지 검색, 이번 달 지수 1위, 최근 신고가, 핵심 숫자 (2026.10 기준)" loading="lazy"/><figcaption>홈 — 단지 검색, 이번 달 지수 1위, 최근 신고가, 핵심 숫자 (2026.10 기준)</figcaption></figure><div class="stats-inline"><div><b>618곳</b><span>평가한 아파트</span></div><div><b>429,395건</b><span>반영한 실거래</span></div><div><b>매일</b><span>자동 갱신</span></div></div>
-<h2 id="s2"><span class="no">02</span>데이터 흐름</h2>
+<h2 id="s1"><span class="no">01</span>만든 이유</h2>
+<p>수도권에는 아파트를 숫자로 비교해 주는 온라인 임장 서비스가 많지만, 대전 아파트는 비교해 볼 만한 곳이 마땅치 않았습니다. 그래서 <b>대전 지역을 대상으로, 공공데이터만 사용해</b> 비슷한 서비스를 만들었고, 이후 세종까지 범위를 넓혔습니다.</p><figure class="rv"><img src="../assets/work/apt-home.webp" alt="홈 — 단지 검색, 이번 달 지수 1위, 최근 신고가, 핵심 숫자 (2026.10 기준)" loading="lazy"/><figcaption>홈 — 단지 검색, 이번 달 지수 1위, 최근 신고가, 핵심 숫자 (2026.10 기준)</figcaption></figure><div class="stats-inline"><div><b>618곳</b><span>평가한 아파트</span></div><div><b>429,395건</b><span>반영한 실거래</span></div><div><b>매일</b><span>자동 갱신</span></div></div>
+<h2 id="s2"><span class="no">02</span>데이터 수집과 갱신</h2>
 <table>
 <tr><th>데이터</th><th>어디서</th><th>무엇에 쓰나</th></tr>
 <tr><td>아파트 매매·분양권 실거래가</td><td>국토교통부 (공공데이터포털)</td><td>가격 · 수익률 · 거래량</td></tr>
 <tr><td>좌표 · 주변 시설</td><td>카카오 로컬 API</td><td>입지점수 (역 · 초등학교 · 학원 · 대형마트 · 병원)</td></tr>
 <tr><td>소비자물가지수</td><td>통계청 KOSIS</td><td>물가를 뺀 실질수익률</td></tr>
 </table>
-<p>세 데이터를 pandas로 계산해 정적 페이지로 만들고, GitHub Actions가 <b>매일 새벽 자동으로</b> 다시 빌드해 배포합니다. 실거래는 늦게 신고되는 경우가 있어 최근 몇 달 치를 매번 다시 받습니다. 서버가 없어 운영비가 들지 않습니다.</p>
-<h2 id="s3"><span class="no">03</span>지표 설계 — 숫자를 믿게 만드는 규칙</h2>
-<div class="decision rv" id="d1"><h3>① 평균 대신 중위가격, 표본이 적으면 계산하지 않는다</h3><dl><dt>문제</dt><dd>거래가 몇 건 없는 단지는 한 건의 특이 거래가 가격을 크게 흔듭니다.</dd><dt>결정</dt><dd>"84㎡ 환산가"를 최근 12개월 거래의 ㎡당 <b>중위가격</b> × 84로 정의하고, 거래가 2건 미만이면 아예 계산하지 않습니다.</dd></dl></div><div class="decision rv" id="d2"><h3>② 명목과 실질을 구분해서 보여 준다</h3><dl><dt>문제</dt><dd>10년 수익률은 물가를 빼느냐에 따라 크게 달라집니다.</dd><dt>결정</dt><dd>물가지수가 있으면 실질수익률로 계산하고, 없으면 계산은 하되 화면에 <b>"명목"이라고 표시</b>합니다. 한계를 숨기지 않는 쪽을 택했습니다.</dd></dl></div><div class="decision rv" id="d3"><h3>③ 해제·직거래는 기본으로 뺀다</h3><dl><dt>문제</dt><dd>계약이 해제된 거래나 가족 간 직거래는 시세를 왜곡합니다.</dd><dt>결정</dt><dd>기본값에서 제외하고, 모든 기준과 가중치는 설정 파일 하나에서 바꿀 수 있게 했습니다.</dd></dl></div><p>종합 지수는 입지점수와 10년·5년 수익률 백분위의 평균입니다. 지표 정의는 README에 먼저 문서로 고정해, 숫자를 의심하는 사람에게 언제든 근거를 보여 줄 수 있게 했습니다.</p>
-<h2 id="s4"><span class="no">04</span>화면 — 사는 사람의 질문별로</h2>
+<p>세 데이터를 pandas로 계산해 정적 페이지를 만들고, GitHub Actions로 <b>매일 새벽</b> 다시 빌드해 배포합니다. 실거래는 뒤늦게 신고되는 경우가 있어 최근 몇 달 치 데이터는 매번 새로 받습니다. 별도 서버가 없어 운영비는 들지 않습니다.</p>
+<h2 id="s3"><span class="no">03</span>지표 설계 기준</h2>
+<div class="decision rv" id="d1"><h3>① 중위가격 사용, 거래 2건 미만은 계산 제외</h3><dl><dt>문제</dt><dd>거래가 몇 건 없는 단지는 한 건의 특이 거래가 가격을 크게 흔듭니다.</dd><dt>결정</dt><dd>"84㎡ 환산가"를 최근 12개월 거래의 ㎡당 <b>중위가격</b> × 84로 정의하고, 거래가 2건 미만이면 아예 계산하지 않습니다.</dd></dl></div><div class="decision rv" id="d2"><h3>② 명목·실질 수익률 구분 표시</h3><dl><dt>문제</dt><dd>10년 수익률은 물가를 빼느냐에 따라 크게 달라집니다.</dd><dt>결정</dt><dd>물가지수가 있으면 실질수익률을 계산하고, 없으면 명목 수익률을 보여 주면서 화면에 <b>"명목"이라고 표시</b>합니다. 사용자가 두 값을 혼동하지 않게 하기 위해서입니다.</dd></dl></div><div class="decision rv" id="d3"><h3>③ 해제·직거래 거래는 기본 제외</h3><dl><dt>문제</dt><dd>계약이 해제된 거래나 가족 간 직거래는 시세를 왜곡합니다.</dd><dt>결정</dt><dd>기본값에서 제외하고, 모든 기준과 가중치는 설정 파일 하나에서 바꿀 수 있게 했습니다.</dd></dl></div><p>종합 지수는 입지점수와 10년·5년 수익률 백분위의 평균입니다. 지표 정의는 README에 먼저 정리해 두어, 계산 방식에 대한 질문을 받으면 근거를 바로 보여 줄 수 있게 했습니다.</p>
+<h2 id="s4"><span class="no">04</span>화면 — 구매자의 질문별 구성</h2>
 <table>
 <tr><th>페이지</th><th>답하는 질문</th></tr>
 <tr><td>단지 페이지</td><td>이 단지는 몇 점인가 — 입지·성장성·상승세·가성비·거래량 카드, 가격 추이, 입지 레이더</td></tr>
@@ -62,11 +62,11 @@
 <tr><td>맞춤 찾기</td><td>나는 얼마까지 살 수 있나 — 연소득·자기자본으로 DSR·LTV 기준 살 수 있는 가격 계산</td></tr>
 <tr><td>관심 단지</td><td>내가 본 단지는 — 브라우저에만 저장, 서버로 보내지 않음</td></tr>
 </table><div class="grid2"><figure class="rv"><img src="../assets/work/apt-finder.webp" alt="맞춤 찾기 — 예산과 조건으로 단지 고르기" loading="lazy"/><figcaption>맞춤 찾기 — 예산과 조건으로 단지 고르기</figcaption></figure><figure class="rv"><img src="../assets/work/apt-compare.webp" alt="단지 비교 — 최대 네 곳을 나란히" loading="lazy"/><figcaption>단지 비교 — 최대 네 곳을 나란히</figcaption></figure></div><figure class="rv"><img src="../assets/work/apt-map.webp" alt="지도와 동네 온도 — 동네별 가격 흐름" loading="lazy"/><figcaption>지도와 동네 온도 — 동네별 가격 흐름</figcaption></figure>
-<h2 id="s5"><span class="no">05</span>알리기 — 공유되고 검색되게</h2>
-<p>단지마다 "단지명 · 지수 82 S등급"처럼 다른 링크 미리보기가 뜨게 했고, 사이트맵을 함께 만들어 구글·네이버 검색에 등록할 수 있게 했습니다. 만드는 것만큼 <b>찾아오게 하는 것</b>도 서비스의 일부라고 봤습니다.</p>
+<h2 id="s5"><span class="no">05</span>공유와 검색 노출</h2>
+<p>단지마다 "단지명 · 지수 82 S등급"처럼 다른 링크 미리보기가 뜨게 했고, 사이트맵을 함께 만들어 구글·네이버 검색에 등록할 수 있게 했습니다. 링크 공유와 검색으로 <b>사용자가 찾아오는 경로</b>까지 서비스 범위에 넣었습니다.</p>
 <h2 id="s6"><span class="no">06</span>다음 할 일과 돌아보며</h2>
 <p>세대수·브랜드 같은 단지 정보, 학군 지표, 전세가율을 다음 순서로 붙일 계획입니다.</p>
-<p>커머스에서 늘 "이 숫자를 믿어도 되나"를 물었고, 이번에는 그 질문에 답하는 쪽에 서 봤습니다. 지표를 만들 때 가장 오래 걸린 것은 계산이 아니라 <b>"무엇을 빼고, 언제 계산하지 않을지"를 정하는 일</b>이었습니다.</p>
+<p>커머스에서는 주어진 지표를 보고 판단하는 입장이었다면, 이번에는 지표를 처음부터 정의해 봤습니다. 가장 오래 걸린 일은 <b>어떤 거래를 제외하고 어떤 경우에 계산하지 않을지 정하는 일</b>이었습니다.</p>
 <p class="small"><a href="https://spgummo0905-alt.github.io/daejeon-apt-index/" target="_blank" rel="noopener">사이트 보기 ↗</a> · <a href="https://github.com/spgummo0905-alt/daejeon-apt-index" target="_blank" rel="noopener">GitHub ↗</a> · 지수와 점수는 참고용이며 투자 권유가 아닙니다.</p>
 
 <a class="next" href="empatho.html"><div><span>NEXT CASE</span><b>EMPATHO — 유방암 검진 CDSS</b></div><span class="mono">→</span></a></article></div>
