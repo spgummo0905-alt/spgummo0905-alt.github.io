@@ -758,3 +758,13 @@ details.more-dec summary { cursor: pointer; padding: 12px 0; font-weight: 700; c
 .c2-list li:first-child b { color: #3fe08e; }
 @media (max-width: 900px) { .c2-in { grid-template-columns: 1fr; padding-top: 80px; padding-bottom: 72px; gap: 40px; } .c2-list a { grid-template-columns: 1fr auto; } .c2-list span { grid-column: 1 / -1; } }
 footer { border-top: 0; }
+/* HOW I WORK v12: dark tone matching contact */
+.next-band { background: #0c1410; color: #eef3ef; }
+.next-band::before { background-image: none; background: radial-gradient(700px circle at 0% 0%, rgba(0,178,92,.22), transparent 60%), radial-gradient(600px circle at 100% 100%, rgba(0,178,92,.12), transparent 60%); }
+.next-band::after { -webkit-text-stroke: 1.5px rgba(255,255,255,.07); }
+.next-band .nb-k { background: transparent; color: #8fa89a; padding: 0; display: inline-flex; align-items: center; gap: 10px; }
+.next-band .nb-k::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(0,178,92,.18); }
+.next-band .nb-head h2 { color: #fff; }
+.nb-list li { box-shadow: 0 24px 50px -30px rgba(0,0,0,.8); }
+.nb-n { -webkit-text-stroke-color: var(--accent); }
+.next-band + .wrap .work2 { border-top: 0; }
