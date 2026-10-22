@@ -843,3 +843,16 @@ a.w-vcard:hover .w-play { transform: translate(-50%,-50%) scale(1.08); }
 .skills sup { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--cc); margin-left: 3px; vertical-align: 12px; }
 .skills i { font-style: normal; color: var(--line-2); font-weight: 300; font-size: 22px; }
 @media (max-width: 640px) { .skills a, .skills i { font-size: 18px; } .skills { gap: 4px 10px; } }
+/* live site buttons */
+.w-link { cursor: pointer; transition: transform .25s, border-color .25s, box-shadow .25s; }
+.w-link:hover { transform: translateY(-4px); border-color: var(--line-2); box-shadow: 0 20px 40px -24px rgba(30,40,30,.35); }
+.w-acts { margin-top: auto; padding-top: 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.w-acts .w-go { margin: 0; padding: 0; }
+.w-live { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 700; color: #fff; background: #0c1410; border-radius: 999px; padding: 9px 16px; transition: background .2s, transform .2s; }
+.w-live:hover { background: var(--accent-ink); transform: translateY(-2px); }
+.w-titlerow { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 0 0 8px; }
+.w-titlerow h3 { margin: 0 !important; }
+.w-live { flex-shrink: 0; font-size: 15px; padding: 10px 18px; }
+@media (max-width: 640px) { .w-titlerow { flex-wrap: wrap; } .w-live { font-size: 14px; } }
+.w-live { background: var(--accent); color: #fff; }
+.w-live:hover { background: var(--accent-ink); }
